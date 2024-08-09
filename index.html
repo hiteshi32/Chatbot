@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Web Page</title>
+
+    <!-- Watson Assistant Script Integration -->
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "2768545d-2749-4cf1-a564-ce9007bce9d5", // The ID of this integration.
+        region: "us-south", // The region your integration is hosted in.
+        serviceInstanceID: "ecd63f0e-d230-47f8-8b25-9548f32c9bbe", // The ID of your service instance.
+        onLoad: async (instance) => { await instance.render(); }
+      };
+      setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 20;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        justify-content: center; /* Center horizontally */
+        align-items: center;
+      }
+      img {
+        display: block;
+        max-width: 60%;
+        height: auto;
+      }
+    </style>
+</head>
+<body>
+    <!-- Add your image here -->
+    <img src="cf.jpg"  style=" margin: 0 auto; width: 2500px; height: 630px;">
+</body>
+</html>
